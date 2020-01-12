@@ -31,6 +31,8 @@ else:
 STATIC_ROOT = os.path.abspath(os.path.join(PROJECT_PATH, STATIC_PATH))
 MEDIA_ROOT = os.path.abspath(os.path.join(PROJECT_PATH, MEDIA_PATH))
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 CORS_ORIGIN_WHITELIST = ()
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_EXPOSE_HEADERS = (
