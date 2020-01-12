@@ -8,6 +8,7 @@ ALLOWED_HOSTS = (
     'guarded-stream-63902.herokuapp.com',
 )
 
+# Set as False in prod environment
 DEBUG = True
 
 INSTALLED_APPS += (
