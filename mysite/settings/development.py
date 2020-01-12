@@ -45,11 +45,11 @@ CORS_ALLOW_HEADERS = default_headers + (
     'Content-Disposition',
 )
 
-MEMCACHED_URL = '127.0.0.1:11211'
+REDIS_URL = 'redis://127.0.0.1:6379'
 
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': MEMCACHED_URL,
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': REDIS_URL + '/1',
     }
 }
